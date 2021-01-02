@@ -12,8 +12,12 @@ public:
 class field {
 public:
 	field(coord&);
-private:
 	coord coordinate;
 	string color;
 };
-
+class rook {
+public:
+	rook(coord&);
+	coord position;
+	coord g_moves[16];
+};

@@ -13,3 +13,6 @@ field::field(coord& xy) {
 	if ((xy.x + xy.y) % 2) { color = "белое"; }
 	else { color = "чёрное"; }
 }
+rook::rook(coord& xy) {
+	position = xy;
+}
