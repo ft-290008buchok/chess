@@ -1,5 +1,3 @@
-﻿  obgects.cpp
-f:\1\для института\документы для курсовых и лаб\3-й семестр\алг и струк данных\репоз\chess\chess\obgects.cpp(23): warning C4715: 'line::angle': not all control paths return a value
-f:\1\для института\документы для курсовых и лаб\3-й семестр\алг и струк данных\репоз\chess\chess\obgects.cpp(29): warning C4715: 'line::cross': not all control paths return a value
+﻿  main.cpp
   chess.vcxproj -> F:\1\для института\документы для курсовых и лаб\3-й семестр\Алг и струк данных\репоз\chess\chess\Debug\chess.exe
   chess.vcxproj -> F:\1\для института\документы для курсовых и лаб\3-й семестр\Алг и струк данных\репоз\chess\chess\Debug\chess.pdb (Full PDB)

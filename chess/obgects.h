@@ -15,9 +15,16 @@ public:
 	coord coordinate;
 	string color;
 };
+//===============================
 class rook {
 public:
 	rook(coord&);
 	coord position;
 	coord g_moves[16];
+};
+class elephant {
+public:
+	elephant(coord);
+	coord position;
+	coord g_moves[14];
 };
