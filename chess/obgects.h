@@ -20,7 +20,7 @@ class rook {
 public:
 	rook(coord&);
 	coord position;
-	coord g_moves[16];
+	coord g_moves[15];
 };
 class elephant {
 public:

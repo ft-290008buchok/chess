@@ -12,8 +12,8 @@ int main() {
 	cout << "¬ведите координату второго пол€ в формате x y: ";
 	cin >> m >> n;
 	coord b(m, n);
-	elephant el(b);
-	for (int i = 0; i < 14; i++) {
+	rook el(b);
+	for (int i = 0; i < 15; i++) {
 		cout << el.g_moves[i].x << " " << el.g_moves[i].y << endl;
 	 }
 	return 0;

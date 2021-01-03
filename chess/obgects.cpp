@@ -20,9 +20,16 @@ rook::rook(coord& xy) {
 		g_moves[i].x = i + 1;
 		g_moves[i].y = xy.y;
 	}
-	for (i = 8; i < 16; i++) {
-		g_moves[i].y = i - 7;
-		g_moves[i].x = xy.x;
+	while (i < 15) {
+		if (i - 7 < position.y) {
+			g_moves[i].y = i - 7;
+			g_moves[i].x = xy.x;
+		}
+		else {
+			g_moves[i].y = i - 6;
+			g_moves[i].x = xy.x;
+		}
+		i ++;
 	}
 }
 elephant::elephant(coord xy) {
