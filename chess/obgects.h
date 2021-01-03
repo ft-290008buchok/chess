@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
+
 using namespace std;
+
 class coord {
 public:
 	coord(const int&, const int&);

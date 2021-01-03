@@ -6,15 +6,18 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "rus");
 	int k, l, m, n;
-	cout << "Введите координату первого поля в формате x y: ";
+	cout << "Введите координату поля (k, l) в формате x y: ";
 	cin >> k >> l;
 	coord a(k, l);
-	cout << "Введите координату второго поля в формате x y: ";
+	cout << "Введите координату поля (m, n) в формате x y: ";
 	cin >> m >> n;
 	coord b(m, n);
-	queen el(b);
-	for (int i = 0; i < 28; i++) {
-		cout << el.g_moves[i].x << " " << el.g_moves[i].y << endl;
-	 }
+	
+	field f1(a), f2(b);
+	if (f1.color == f2.color)
+		cout << "Поля (k, l) и (m, n) являются полями одного цвета\n";
+	else
+		cout << "Поля (k, l) и (m, n) не являются полями одного цвета\n";
+
 	return 0;
 }
