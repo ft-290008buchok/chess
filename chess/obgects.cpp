@@ -65,3 +65,50 @@ elephant::elephant(coord xy) {
 		g_moves[i] = xy;
 	}
 }
+queen::queen(coord xy) {
+	position = xy;
+	int i;
+	for (i = 0; i < 8; i++) {
+		g_moves[i].x = i + 1;
+		g_moves[i].y = xy.y;
+	}
+	while (i < 15) {
+		if (i - 7 < position.y) {
+			g_moves[i].y = i - 7;
+			g_moves[i].x = xy.x;
+		}
+		else {
+			g_moves[i].y = i - 6;
+			g_moves[i].x = xy.x;
+		}
+		i++;
+	}
+	while ((xy.x > 1) && (xy.y < 8)) {
+		xy.x -= 1;
+		xy.y += 1;
+		g_moves[i] = xy;
+		i += 1;
+	}
+	xy = position;
+	while ((xy.x < 8) && (xy.y > 1)) {
+		xy.x += 1;
+		xy.y -= 1;
+		g_moves[i] = xy;
+		i += 1;
+	}
+
+	xy = position;
+	while ((xy.x > 1) && (xy.y > 1)) {
+		xy.x -= 1;
+		xy.y -= 1;
+		g_moves[i] = xy;
+		i += 1;
+	}
+	xy = position;
+	while ((xy.x < 8) && (xy.y < 8)) {
+		xy.x += 1;
+		xy.y += 1;
+		g_moves[i] = xy;
+		i += 1;
+	}
+}

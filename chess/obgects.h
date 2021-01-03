@@ -28,3 +28,9 @@ public:
 	coord position;
 	coord g_moves[14];
 };
+class queen {
+public:
+	queen(coord);
+	coord position;
+	coord g_moves[28];
+};
