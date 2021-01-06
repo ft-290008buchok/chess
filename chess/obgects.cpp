@@ -1,5 +1,6 @@
 #include "obgects.h"
 #include<cmath>
+
 coord::coord(const int& x, const int& y) {
 	coord::x = x;
 	coord::y = y;
@@ -110,5 +111,41 @@ queen::queen(coord xy) {
 		xy.y += 1;
 		g_moves[i] = xy;
 		i += 1;
+	}
+}
+horse::horse(coord xy) {
+	position = xy;
+	int i;
+	g_moves[0] = xy;
+	g_moves[1].x = xy.x - 1;
+	g_moves[1].y = xy.y + 2;
+
+	g_moves[2].x = xy.x + 1;
+	g_moves[2].y = xy.y + 2;
+
+	g_moves[3].x = xy.x - 1;
+	g_moves[3].y = xy.y - 2;
+
+	g_moves[4].x = xy.x + 1;
+	g_moves[4].y = xy.y - 2;
+
+	g_moves[5].x = xy.x - 2;
+	g_moves[5].y = xy.y + 1;
+
+	g_moves[6].x = xy.x - 2;
+	g_moves[6].y = xy.y - 1;
+
+	g_moves[7].x = xy.x + 2;
+	g_moves[7].y = xy.y + 1;
+
+	g_moves[8].x = xy.x + 2;
+	g_moves[8].y = xy.y - 1;
+
+	for (i = 0; i < 9; i++) {
+		if ((1 > g_moves[i].x > 8) ||
+			(1 > g_moves[i].y > 8)) {
+			g_moves[i].x = 0;
+			g_moves[i].y = 0;
+		}
 	}
 }

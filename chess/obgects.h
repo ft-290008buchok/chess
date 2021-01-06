@@ -14,6 +14,7 @@ public:
 class field {
 public:
 	field(coord&);
+	field() {};
 	coord coordinate;
 	string color;
 };
@@ -35,4 +36,10 @@ public:
 	queen(coord);
 	coord position;
 	coord g_moves[28];
+};
+class horse {
+public:
+	horse(coord);
+	coord position;
+	coord g_moves[9];
 };
