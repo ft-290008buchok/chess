@@ -120,6 +120,5 @@ int main() {
 	if (f1.color != f2.color)
 		cout << "Попасть слоном с поля (k, l) на поле (m, n) нельзя\n";
 
-
 	return 0;
 }

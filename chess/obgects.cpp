@@ -11,17 +11,23 @@ bool coord::equal(coord& c) {
 }
 field::field(coord& xy) {
 	coordinate = xy;
+	/*Если сумма координат чётная,
+	то поле чёрное, если нет - белое*/
 	if ((xy.x + xy.y) % 2) { color = "белое"; }
 	else { color = "чёрное"; }
 }
 rook::rook(coord& xy) {
 	position = xy;
 	int i;
+	//запись в массив горизонтальных ходов
 	for (i = 0; i < 8; i++) {
 		g_moves[i].x = i + 1;
 		g_moves[i].y = xy.y;
 	}
+	//запись в массив вертикальных ходов
 	while (i < 15) {
+		/*Чтобы не было повторяющегося элемента
+		(координаты фигуры)*/
 		if (i - 7 < position.y) {
 			g_moves[i].y = i - 7;
 			g_moves[i].x = xy.x;
@@ -36,6 +42,10 @@ rook::rook(coord& xy) {
 elephant::elephant(coord xy) {
 	position = xy;
 	int i;
+	/*Обнуление массива ходов нужно, потому что
+	массив может быт частично пустым, число
+	"действующих" элементов массива зависит
+	от координаты фигуры на доске*/
 	for (i = 0; i < 14; i++) {
 		g_moves[i].x = 0;
 		g_moves[i].y = 0;
