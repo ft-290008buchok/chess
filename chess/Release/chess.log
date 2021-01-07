@@ -1,0 +1,8 @@
+﻿  main.cpp
+  obgects.cpp
+obgects.cpp(139): warning C4101: 'i': unreferenced local variable
+  Generating code
+  All 92 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  chess.vcxproj -> F:\1\для института\документы для курсовых и лаб\3-й семестр\Алг и струк данных\репоз\chess\chess\Release\chess.exe
+  chess.vcxproj -> F:\1\для института\документы для курсовых и лаб\3-й семестр\Алг и струк данных\репоз\chess\chess\Release\chess.pdb (Full PDB)
