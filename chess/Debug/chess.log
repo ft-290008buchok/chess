@@ -1,5 +1,4 @@
 ﻿  obgects.cpp
-f:\1\для института\документы для курсовых и лаб\3-й семестр\алг и струк данных\репоз\chess\chess\obgects.cpp(155): warning C4804: '>': unsafe use of type 'bool' in operation
-f:\1\для института\документы для курсовых и лаб\3-й семестр\алг и струк данных\репоз\chess\chess\obgects.cpp(156): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\1\для института\документы для курсовых и лаб\3-й семестр\алг и струк данных\репоз\chess\chess\obgects.cpp(129): warning C4101: 'i': unreferenced local variable
   chess.vcxproj -> F:\1\для института\документы для курсовых и лаб\3-й семестр\Алг и струк данных\репоз\chess\chess\Debug\chess.exe
   chess.vcxproj -> F:\1\для института\документы для курсовых и лаб\3-й семестр\Алг и струк данных\репоз\chess\chess\Debug\chess.pdb (Full PDB)

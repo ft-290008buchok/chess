@@ -35,12 +35,13 @@ rook::rook(coord& xy) {
 }
 elephant::elephant(coord xy) {
 	position = xy;
-	int i = 0;
+	int i;
 	for (i = 0; i < 14; i++) {
 		g_moves[i].x = 0;
 		g_moves[i].y = 0;
 	}
 
+	i = 0;
 	g_moves[i] = xy;
 	while ((xy.x > 1) && (xy.y < 8)) {
 		xy.x -= 1;
@@ -150,12 +151,4 @@ horse::horse(coord xy) {
 
 	g_moves[8].x = xy.x + 2;
 	g_moves[8].y = xy.y - 1;
-
-	for (i = 0; i < 9; i++) {
-		if ((1 > g_moves[i].x > 8) ||
-			(1 > g_moves[i].y > 8)) {
-			g_moves[i].x = 0;
-			g_moves[i].y = 0;
-		}
-	}
 }

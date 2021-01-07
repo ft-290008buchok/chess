@@ -6,11 +6,23 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "rus");
 	int k, l, m, n, i, j;
-	cout << "Введите координату поля (k, l) в формате x y: ";
-	cin >> k >> l;
+	while (true) {
+		cout << "Введите координату поля (k, l) в формате x y: ";
+		cin >> k >> l;
+		if ((k < 1) || (k > 8) || (l < 1) || (l > 8))
+			cout << "Вы ввели несуществующую координату\n";
+		else
+			break;
+	}
 	coord a(k, l);
-	cout << "Введите координату поля (m, n) в формате x y: ";
-	cin >> m >> n;
+	while (true) {
+		cout << "Введите координату поля (m, n) в формате x y: ";
+		cin >> m >> n;
+		if ((m < 1) || (m > 8) || (n < 1) || (n > 8))
+			cout << "Вы ввели несуществующую координату\n";
+		else
+			break;
+	}
 	coord b(m, n);
 	
 	//1===========================
@@ -84,6 +96,30 @@ int main() {
 			}
 		}
 	}
-	
+
+	//6=========================
+	elephant el(a);
+	elephant el_field(b);
+	check = 0;
+	for (i = 0; i < 14; i++) {
+		if (el.g_moves[i].equal(b))
+			check = 1;
+	}
+	if (check)
+		cout << "Попасть слоном с поля (k, l) на поле (m, n) можно за один ход\n";
+	else if (f1.color == f2.color) {
+		cout << "Попасть слоном с поля (k, l) на поле (m, n)\n";
+		cout << "можно за 2 хода, первый ход можно сделать на\n";
+		for (i = 0; i < 14; i++) {
+			for (j = 0; j < 14; j++) {
+				if ((el.g_moves[i].equal(el_field.g_moves[j])) && (el.g_moves[i].x != 0))
+					cout << el.g_moves[i].x << " " << el.g_moves[i].y << endl;
+			}
+		}
+	}
+	if (f1.color != f2.color)
+		cout << "Попасть слоном с поля (k, l) на поле (m, n) нельзя\n";
+
+
 	return 0;
 }
