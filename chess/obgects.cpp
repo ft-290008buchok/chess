@@ -36,6 +36,11 @@ rook::rook(coord& xy) {
 elephant::elephant(coord xy) {
 	position = xy;
 	int i = 0;
+	for (i = 0; i < 14; i++) {
+		g_moves[i].x = 0;
+		g_moves[i].y = 0;
+	}
+
 	g_moves[i] = xy;
 	while ((xy.x > 1) && (xy.y < 8)) {
 		xy.x -= 1;
@@ -69,6 +74,11 @@ elephant::elephant(coord xy) {
 queen::queen(coord xy) {
 	position = xy;
 	int i;
+	for (i = 0; i < 28; i++) {
+		g_moves[i].x = 0;
+		g_moves[i].y = 0;
+	}
+
 	for (i = 0; i < 8; i++) {
 		g_moves[i].x = i + 1;
 		g_moves[i].y = xy.y;
