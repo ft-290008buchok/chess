@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "rus");
-	int k, l, m, n, i;
+	int k, l, m, n, i, j;
 	cout << "Введите координату поля (k, l) в формате x y: ";
 	cin >> k >> l;
 	coord a(k, l);
@@ -44,6 +44,30 @@ int main() {
 	else
 		cout << "Конь, расположенный на поле (k, l) не угрожает полю (m, n)\n";
 
+	//4==========================
+	rook r(a);
+	rook r_field(b);
+    check = 0;
+	for (i = 0; i < 15; i++) {
+		if (r.g_moves[i].equal(b))
+			check = 1;
+	}
+	if (check)
+		cout << "Попасть ладьёй с поля (k, l) на поле (m, n) можно одним ходом\n";
+	else {
+		cout << "Попасть ладбёй с поля (k, l) на поле (m, n)\n";
+		cout << "можно за 2 хода, первый ход можно сделать на\n";
+		for (i = 0; i < 15; i++) {
+			for (j = 0; j < 15; j++) {
+				if (r.g_moves[i].equal(r_field.g_moves[j]))
+					cout << r.g_moves[i].x << " " << r.g_moves[i].y << endl;
+			}
+		}
+	}
+		
+	
+	
+	
 
 	return 0;
 }
